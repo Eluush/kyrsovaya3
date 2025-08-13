@@ -19,4 +19,5 @@ public class TelegramMessageService {
         SendMessage sendMessage = new SendMessage(chatId, message);
         telegramBot.execute(sendMessage);
     }
+
 }
