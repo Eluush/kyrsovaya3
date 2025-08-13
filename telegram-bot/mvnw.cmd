@@ -156,6 +156,17 @@ if exist %WRAPPER_JAR% (
 
 @REM Provide a "standardized" way to retrieve the CLI args that will
 @REM work with both Windows and non-Windows executions.
+
+@REM Установка переменных окружения для Spring
+set SPRING_DATASOURCE_URL=jdbc:postgresql://localhost:5432/my_database
+set SPRING_DATASOURCE_USERNAME=my_database
+set SPRING_DATASOURCE_PASSWORD=12345
+set MYAPP_TOKEN=8388542227:AAGETG-NwIUkL4vbW8tgABVFoJ7EN6N-lfg
+set SPRING_MAIL_HOST=smtp.example.com
+set SPRING_MAIL_PORT=587
+set SPRING_MAIL_USERNAME=your-email@example.com
+set SPRING_MAIL_PASSWORD=your-email-password
+
 set MAVEN_CMD_LINE_ARGS=%*
 
 %MAVEN_JAVA_EXE% ^
@@ -176,8 +187,8 @@ set ERROR_CODE=1
 
 if not "%MAVEN_SKIP_RC%"=="" goto skipRcPost
 @REM check for post script, once with legacy .bat ending and once with .cmd ending
-if exist "%USERPROFILE%\mavenrc_post.bat" call "%USERPROFILE%\mavenrc_post.bat"
-if exist "%USERPROFILE%\mavenrc_post.cmd" call "%USERPROFILE%\mavenrc_post.cmd"
+if exist "%USERPROFILE%mavenrc_post.bat" call "%USERPROFILE%mavenrc_post.bat"
+if exist "%USERPROFILE%mavenrc_post.cmd" call "%USERPROFILE%mavenrc_post.cmd"
 :skipRcPost
 
 @REM pause the script if MAVEN_BATCH_PAUSE is set to 'on'
