@@ -1,26 +1,38 @@
 # Default ignored files
-/shelf/
-/workspace.xml
-# Maven files
-target/
-*.log
-*.class
-*.jar
-*.war
-*.ear
-*.zip
-*.tar.gz
-*.tar
-*.tgz
-*.swp
+ /shelf/
+ /workspace.xml
 
-# IntelliJ IDEA files
-.idea/
+ ## Maven files
+ target/
+ *.log
+ *.class
+ *.jar
+ *.war
+ *.ear
+ *.zip
+ *.tar.gz
+ *.tar
+ *.tgz
+ *.swp
+
+ # IntelliJ IDEA files
+ .idea/
 *.iml
 
 # macOS files
-.DS_Store
-_MACOSX/
+ .DS_Store
+ _MACOSX/
+
+# Application configuration files (if they contain sensitive data)
 application.properties
 application.yml
 
+ # Temporary files
+ *.tmp
+ *.temp
+
+ # Local environment variables
+ .env
+
+ ## Backup files
+ *~

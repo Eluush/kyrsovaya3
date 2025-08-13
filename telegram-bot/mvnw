@@ -32,7 +32,38 @@
 #     e.g. to debug Maven itself, use
 #       set MAVEN_OPTS=-Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=8000
 #   MAVEN_SKIP_RC - flag to disable loading of mavenrc files
+#
+# Note: Ensure that your .gitignore includes:
+# - target/
+# - *.log
+# - *.class
+# - *.jar
+# - *.war
+# - *.ear
+# - *.zip
+# - *.tar.gz
+# - *.tar
+# - *.tgz
+# - *.swp
+#
+# This helps keep your repository clean from build artifacts and temporary files.
 # ----------------------------------------------------------------------------
+
+# Check if JAVA_HOME is set
+if [ -z "$JAVA_HOME" ]; then
+  echo "Error: JAVA_HOME is not set."
+  exit 1
+fi
+
+# Set MAVEN_HOME if not already set
+if [ -z "$M2_HOME" ]; then
+  M2_HOME=$(dirname $(dirname $(readlink -f "$0")))
+fi
+
+export MAVEN_OPTS="${MAVEN_OPTS:-}"
+
+echo "Starting Maven..."
+exec "$M2_HOME/bin/mvn" "$@"
 
 if [ -z "$MAVEN_SKIP_RC" ] ; then
 
