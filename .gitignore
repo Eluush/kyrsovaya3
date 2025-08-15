@@ -1,6 +1,6 @@
 # Default ignored files
  /shelf/
- /workspace.xml
+ /.idea/workspace.xml
 
  ## Maven files
  target/
@@ -39,4 +39,7 @@ application.yml
  *~
 
 .idea/workspace.xml
+.idea/
+__MACOSX/
+
 
