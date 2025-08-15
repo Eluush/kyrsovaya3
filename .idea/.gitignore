@@ -36,3 +36,6 @@ application.yml
 
  ## Backup files
  *~
+
+.idea/workspace.xml
+
